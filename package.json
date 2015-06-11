@@ -2,7 +2,7 @@
   "name": "todomvc-flux",
   "version": "0.0.3",
   "description": "Example Flux architecture.",
-  "repository": "https://github.com/facebook/flux",
+  "repository": "https://github.com/clcuevas/know_flux",
   "main": "js/app.js",
   "dependencies": {
     "flux": "^2.0.1",
