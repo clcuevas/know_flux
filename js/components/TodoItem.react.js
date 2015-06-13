@@ -64,6 +64,7 @@ var TodoItem = React.createClass({
           <label onDoubleClick={this._onDoubleClick}>
             {todo.text}
           </label>
+          <button className="claudia" onClick={this._onClaudiaClick} />
           <button className="destroy" onClick={this._onDestroyClick} />
         </div>
         {input}
@@ -92,6 +93,10 @@ var TodoItem = React.createClass({
 
   _onDestroyClick: function() {
     TodoActions.destroy(this.props.todo.id);
+  },
+
+  _onClaudiaClick: function() {
+    TodoActions.claudia(this.props.todo.id);
   }
 
 });

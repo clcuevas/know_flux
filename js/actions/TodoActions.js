@@ -78,6 +78,13 @@ var TodoActions = {
     AppDispatcher.dispatch({
       actionType: TodoConstants.TODO_DESTROY_COMPLETED
     });
+  },
+
+  claudia: function(id) {
+    AppDispatcher.dispatch({
+      actionType: TodoConstants.TODO_CLAUDIA,
+      id: id
+    })
   }
 
 };
