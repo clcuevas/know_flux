@@ -76,6 +76,11 @@ function destroyCompleted() {
   }
 }
 
+function claudia(id) {
+  var newText = _todos[id].text.toUpperCase();
+  _todos[id].text = newText;
+}
+
 var TodoStore = assign({}, EventEmitter.prototype, {
 
   /**
@@ -165,6 +170,11 @@ AppDispatcher.register(function(action) {
 
     case TodoConstants.TODO_DESTROY_COMPLETED:
       destroyCompleted();
+      TodoStore.emitChange();
+      break;
+
+    case TodoConstants.TODO_CLAUDIA:
+      claudia(action.id);
       TodoStore.emitChange();
       break;
 
